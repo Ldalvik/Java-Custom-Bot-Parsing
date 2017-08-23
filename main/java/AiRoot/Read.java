@@ -10,7 +10,7 @@ public class Read {
 
     private static StringBuilder contents;
 
-   String getContents(String dir) {
+   void getContents(String dir) {
         contents = new StringBuilder();
         try {
             File aFile = new File(dir);
@@ -24,10 +24,9 @@ public class Read {
         } catch (IOException ex){
             ex.printStackTrace();
         }
-        return contents.toString();
    }
 
-    String getFallback() {
+    private String getFallback() {
         String[] messages = contents.toString().split("\n");
         StringJoiner sb = new StringJoiner("\n");
         for (String message : messages) {
@@ -53,8 +52,7 @@ public class Read {
             result = getFallback();
         } else {
             String[] array = sb.toString().split("\n");
-            Random r = new Random();
-            int random = r.nextInt(array.length);
+            int random = Random(array);
             result = array[random];
         }
         return result;

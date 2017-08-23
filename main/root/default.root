@@ -1,0 +1,11 @@
+<hello>hi there<hello>
+<hello>hey<hello>
+<bye>see ya<bye>
+<bye>goodbye<bye>
+[fallback:sorry, i don't recognise that!]
+[fallback:can you rephrase that?]
+[fallback:sorry what was that?]
+[fallback:huh?!]
+[fallback:uhhh yeah idk]
+[fallback:wat]
+[fallback:what are you saying?]
